@@ -1,67 +1,89 @@
-🐄 Mastitis Detection Using IoT and Edge ML
-📌 Project Overview
-Mastitis is a prevalent disease among dairy cattle that causes inflammation of the udder, leading to reduced milk yield and financial loss. Our project introduces a smart IoT-based solution to detect mastitis in its early stages using real-time data from sensors and an ML model deployed on an ESP32 microcontroller.
+# 🐄 Mastitis Detection Using IoT and Edge ML
 
-🛠️ System Architecture
-Sensor Selection:
+## 📌 Project Overview
 
-DHT22 – Measures temperature and humidity to detect inflammation and infection conditions.
+Mastitis is a prevalent disease among dairy cattle that causes inflammation of the udder, leading to reduced milk yield and financial loss. Our project introduces a **smart IoT-based solution** to detect mastitis in its early stages using **real-time sensor data** and a **machine learning model** deployed on an **ESP32 microcontroller**.
 
-Flex Sensor – Detects abnormal udder swelling or changes in pressure.
+---
 
-Bend Sensor – Monitors physical deformation, signaling unusual behavior or posture.
+## 🛠️ System Architecture
 
-All sensors are connected to an ESP32, chosen for its Wi-Fi capabilities and support for edge ML models.
+### 🔧 Sensor Selection
 
-Edge Machine Learning:
+- **DHT22** – Measures temperature and humidity to detect inflammation or infection conditions.
+- **Flex Sensor** – Detects abnormal udder swelling or changes in pressure.
+- **Bend Sensor** – Monitors physical deformation, signaling unusual behavior or posture.
 
-An ML model was trained on real sensor data using Edge Impulse.
+All sensors are connected to the **ESP32**, chosen for its Wi-Fi capabilities and support for running Edge ML models.
 
-The trained model was exported as C++ code and integrated into the .ino sketch running on the ESP32.
+### 🤖 Edge Machine Learning
 
-Inference is done directly on the device — no need for constant cloud connectivity.
+- Trained a lightweight model using **Edge Impulse** on real sensor data.
+- Exported as **C++ code** and integrated into an **`.ino` Arduino sketch** on ESP32.
+- Real-time inference is performed **on-device**, reducing latency and dependency on the cloud.
 
-Simulation Environment:
+### 💻 Simulation Environment
 
-Entire setup simulated and tested on Wokwi, enabling validation of both circuit design and code logic before hardware deployment.
+- Complete setup was **simulated on Wokwi**, enabling accurate testing of both circuitry and embedded logic before physical deployment.
 
-Data Flow & Communication:
+### 🔗 Data Flow & Communication
 
-Sensor readings and inference results are transmitted using the MQTT protocol to:
+Sensor readings and inference results are transmitted using the **MQTT protocol** to:
 
-A custom-built website dashboard (for real-time health status updates).
+- 🌐 A **custom-built website** for real-time health status and alerts.
+- 📊 **ThingSpeak** for IoT-based live data plotting and monitoring.
+- 📈 **Power BI** for advanced data analytics, historical tracking, and trend visualization.
 
-ThingSpeak (for IoT plotting and monitoring).
+### 📺 Visualization & Decision Support
 
-Power BI (for advanced analytics, trends, and reporting).
+- **Power BI Dashboards** for insights into long-term cattle health data.
+- **ThingSpeak Charts** for real-time visualization of temperature, pressure, and ML predictions.
+- **Website Dashboard** alerts farmers immediately upon detecting abnormal signs.
 
-Visualization and Decision Support:
+---
 
-Power BI dashboards offer graphical insights into cattle health history.
+## ⚙️ Components Used
 
-ThingSpeak charts show real-time values of temperature, pressure, and model predictions.
+| Component        | Purpose                                      |
+|------------------|----------------------------------------------|
+| **ESP32**        | Core microcontroller with Wi-Fi & ML support |
+| **DHT22 Sensor** | Temperature & humidity monitoring            |
+| **Flex Sensor**  | Detects udder expansion or swelling          |
+| **Bend Sensor**  | Monitors posture changes or deformation      |
+| **MQTT Protocol**| Sends real-time data to cloud and dashboards |
+| **Wokwi**        | Circuit simulation & virtual prototyping     |
+| **Edge Impulse** | Model training and edge deployment           |
+| **ThingSpeak**   | Real-time IoT dashboard and graphing         |
+| **Power BI**     | Historical data visualization & analytics    |
 
-Website Dashboard gives farmers instant alerts and visual cues for potential mastitis detection.
+---
 
-⚙️ Components Used
+## 🌐 Live Demo
 
-Component	Purpose
-ESP32	Core microcontroller with Wi-Fi + Edge ML support
-DHT22 Sensor	Temperature & humidity monitoring
-Flex Sensor	Detects udder expansion or swelling
-Bend Sensor	Tracks deformation or physical changes
-MQTT Protocol	Sends real-time data to cloud/dashboard
-Wokwi	Circuit simulation & prototyping
-Edge Impulse	Model training and deployment to ESP32
-ThingSpeak	Live graphing and IoT dashboard
-Power BI	Historical visualization & analysis
-💡 Key Highlights
-✅ End-to-end real-time mastitis monitoring system
+🚀 **Deployed Website:** [Mastitis Detection Dashboard](https://dainty-sopapillas-5863ac.netlify.app/)
 
-📶 Low-power edge ML using ESP32
+Check out the real-time cattle health monitoring dashboard where sensor data and ML predictions are visualized and alerts are triggered instantly.
 
-📊 Multiple visualization platforms integrated (website, Power BI, ThingSpeak)
+---
 
-🌍 Scalable and low-cost solution for both small and commercial farms
+## 💡 Key Highlights
 
-📄 Reference Paper: https://www.mdpi.com/2624-7402/3/3/37
+- ✅ **End-to-end real-time mastitis monitoring system**
+- 📶 **Low-power edge ML** deployed on ESP32
+- 📊 **Multiple visualization platforms** integrated (Website, Power BI, ThingSpeak)
+- 🌍 **Scalable, affordable**, and practical for small and large dairy farms
+
+---
+
+## 📄 Reference Paper
+
+🔗 [Detection of Mastitis Disease in Dairy Cows Using IoT and Machine Learning](https://www.mdpi.com/2624-7402/3/3/37) – MDPI Electronics, 2021
+
+---
+
+## 📬 Contact / Contributors
+
+**Team Name:** [Your Team Name]  
+**Developed By:** [Your Names / College Info]  
+**Mentor:** [Guide Name if applicable]  
+**College:** [Your Institution Name]  
