@@ -81,9 +81,3 @@ Check out the real-time cattle health monitoring dashboard where sensor data and
 
 ---
 
-## 📬 Contact / Contributors
-
-**Team Name:** [Your Team Name]  
-**Developed By:** [Your Names / College Info]  
-**Mentor:** [Guide Name if applicable]  
-**College:** [Your Institution Name]  
